@@ -30,6 +30,14 @@ jobs:
         run: python Sheet/Copy.py
 
       - name: Run GenerateReport.bat
-        run: Sheet\GenerateReport.bat
+        run: Sheet/GenerateReport.bat
+      
+      - name: Commit updated files
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add Sheet/*.csv
+          git commit -m "Update CSV files from workflow" || echo "No changes"
+          git push
       
      
