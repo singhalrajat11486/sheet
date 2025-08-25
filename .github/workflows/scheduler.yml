@@ -24,7 +24,10 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run copy.py
-        run: python sheet/copy.py
+        run: python copy.py
 
       - name: Run GenerateReport.py
-        run: python sheet/GenerateReport.py
+        run: python GenerateReport.py
+      
+      - name: Show repo files
+        run: pwd && ls -R
