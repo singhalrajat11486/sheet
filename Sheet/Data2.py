@@ -2,7 +2,7 @@ import pandas as pd
 from openpyxl import load_workbook
 
 # File paths
-excel_path = "DAILY REPORT.xlsm"
+excel_path = "Sheet/DAILY REPORT.xlsm"
 csv_paths = [
     "900 and Above.csv",
     "200-899.csv",
