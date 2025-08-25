@@ -7,30 +7,26 @@ on:
   workflow_dispatch: # allows manual trigger
 
 jobs:
-  run-script:
-    runs-on: windows-latest
+  run-scripts:
+    runs-on: windows-latest   # Use Windows
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-        
-      - name: Show repo files
-        run: pwd && ls -R
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
-      - name: Install dependencies
-        run: |
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
 
       - name: Run Copy.py
         run: python Sheet/Copy.py
 
       - name: Run GenerateReport.bat
-        run: Sheet/GenerateReport.bat
+        run: Sheet\GenerateReport.bat 
       
       - name: Commit updated files
         run: |
