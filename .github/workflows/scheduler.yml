@@ -26,7 +26,7 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-       - name: Run Copy.py
+      - name: Run Copy.py
         run: python Sheet/Copy.py
 
       - name: Run GenerateReport.bat
