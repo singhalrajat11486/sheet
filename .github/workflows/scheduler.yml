@@ -25,5 +25,5 @@ jobs:
 
       - name: Run script
         run: python copy.py
-        name: Run script
+      -  name: Run script
         run: python GenerateReport.py
