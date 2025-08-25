@@ -30,7 +30,7 @@ def copy_paste_values(file_path, sheet_name):
 
     # Save workbook with values pasted
     wb_write.save(filename=file_path)
-    print("✅ Values copied successfully! No formulas were copied.")
+    print("Values copied successfully! No formulas were copied.")
 
 # Example usage
 copy_paste_values("Sheet/DAILY REPORT.xlsm", "Breadth")
