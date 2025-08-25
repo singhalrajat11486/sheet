@@ -26,8 +26,8 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run copy.py
-        run: python Sheet/copy.py
+      - name: Run Copy.py
+        run: python Sheet/Copy.py
 
       - name: Run GenerateReport.py
         run: python Sheet/GenerateReport.py
