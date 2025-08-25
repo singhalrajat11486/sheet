@@ -28,12 +28,9 @@ jobs:
       - name: Run GenerateReport.bat
         run: Sheet\GenerateReport.bat 
       
-      - name: Commit updated files
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add Sheet/*.csv
-          git commit -m "Update CSV files from workflow" || echo "No changes"
-          git push
-      
+      - name: Upload updated Excel
+        uses: actions/upload-artifact@v3
+        with:
+          name: daily-report
+          path: Sheet/DAILYREPORT.xlsm
      
